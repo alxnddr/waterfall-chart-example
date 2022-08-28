@@ -10,6 +10,14 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@visx/axis": "^2.10.0",
+    "@visx/grid": "^2.10.0",
+    "@visx/group": "^2.10.0",
+    "@visx/responsive": "^2.10.0",
+    "@visx/scale": "^2.2.2",
+    "@visx/shape": "^2.10.0",
+    "@visx/text": "^2.10.0",
+    "d3-array": "^3.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -39,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.0.3"
   }
 }

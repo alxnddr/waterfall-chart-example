@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ParentSize } from "@visx/responsive";
+import { WaterfallChart } from "./WaterfallChart";
+import "./App.css";
+
+const data = [
+  { month: "Jan", earnings: 23 },
+  { month: "Feb", earnings: 18 },
+  { month: "Mar", earnings: -14 },
+  { month: "Apr", earnings: 4 },
+  { month: "May", earnings: -26 },
+  { month: "Jun", earnings: 10 },
+  { month: "Jul", earnings: 32 },
+  { month: "Aug", earnings: 48 },
+  { month: "Sep", earnings: 12 },
+  { month: "Oct", earnings: -14 },
+  { month: "Nov", earnings: -15 },
+  { month: "Dec", earnings: 5 },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ParentSize>
+        {({ width, height }) => (
+          <WaterfallChart
+            width={width}
+            height={height}
+            data={data}
+            xAccessor={(datum) => datum.month}
+            yAccessor={(datum) => datum.earnings}
+            yLabel="Earnings"
+          />
+        )}
+      </ParentSize>
     </div>
   );
 }
